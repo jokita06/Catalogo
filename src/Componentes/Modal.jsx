@@ -12,7 +12,7 @@ export function Modal(movie, onClose ){
     return(
         <div className={estilos.modalback}>
             <div className={estilos.modalContainer}>
-                <div className={estilos.title}>
+                <div className={estilos.modalHeader}>
                     <h2>{movie.title}</h2>
                     <button onClick={onClose}>x</button>
                 </div>
@@ -20,7 +20,7 @@ export function Modal(movie, onClose ){
                 <div className={estilos.imgDetails}>
                     <img  className={estilos.imgModal} src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title}/>
 
-                    <ul> 
+                    <ul className={estilos.movieDetail}> 
                         <li>{`Popularidade: ${movie.popularity ?? 'Não disponível no momento, aguarde'}`}</li>
                         <li>{`Data de Lançamento: ${movie.realise_date}`}</li>
                         <li>{`Quantidade de votos: ${movie.vote_count}`}</li>

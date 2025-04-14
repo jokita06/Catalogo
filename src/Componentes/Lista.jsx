@@ -45,7 +45,7 @@ export function Lista() {
                     onOpenModal = {handleOpenModal}/>   
                 ))}
             </figure>
-            {setSelectedMovie && (<Modal movie={SelectedMovie} onClose = {handleCloseModal}/>)}
+            {SelectedMovie && (<Modal movie={SelectedMovie} onClose = {handleCloseModal}/>)}
         </div>
     )
 }

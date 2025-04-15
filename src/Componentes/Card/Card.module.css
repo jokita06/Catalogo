@@ -1,0 +1,43 @@
+.container {
+    width: 220px;
+    margin: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: #181818;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.container img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.container h3 {
+    padding: 15px 10px 5px;
+    margin: 0;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+}
+
+.container p {
+    padding: 0 10px 15px;
+    margin: 0;
+    font-size: 0.8rem;
+    color: #d2d2d2;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

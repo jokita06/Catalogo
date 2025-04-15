@@ -1,14 +1,13 @@
-import { Cabecalho } from "./Componentes/cabecalho";
-import { BarraNavegacao } from "./Componentes/BarraNavegacao";
-import { Conteudo } from "./Componentes/Conteudo";
-import { Inicial } from "./Pages";
+import React from "react";
+import { BrowserRouter } from 'react-router-dom';
+import { Rotas } from './Rotas/Rotas';
 
 function App() {
 
   return (
-    <>
-      <Inicial/>
-    </>
+      <BrowserRouter>
+        <Rotas/>
+      </BrowserRouter>
   )
 
 }

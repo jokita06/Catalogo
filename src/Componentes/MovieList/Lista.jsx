@@ -2,9 +2,9 @@
 import axios from "axios";
 // As ferramentas começadas 
 import React, {useState, useEffect} from "react";
-import { Card } from './Card';
+import { Card } from '../Card/Card';
 import estilos from "./Lista.module.css";
-import { Modal } from "./Modal";
+import { Modal } from "../Modal/Modal";
 
 const API_Key = 'af26cce282aecf5c6cc39a264f29d0a7';
 const API_Url = 'https://api.themoviedb.org/3'

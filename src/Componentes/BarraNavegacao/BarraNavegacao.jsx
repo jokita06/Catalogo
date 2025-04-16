@@ -5,29 +5,30 @@ export function BarraNavegacao() {
     return (
         <nav className={estilos.container}>
             <ul>
-            <Link to="/">
+                <Link to="/" className={estilos.menuLinks}>
                 <li>  
                     <span class="material-symbols-outlined">
                         movie
                     </span>
-                    Filmes
+                    <span>Filmes</span>
                 </li>
-            </Link>
-            <Link to ='serie'> 
+                </Link>
                 
+                <Link to='serie' className={estilos.menuLinks}> 
                 <li>
                     <span class="material-symbols-outlined">
                         movie
                     </span>
-                    Séries
+                    <span>Séries</span>
                 </li>
                 </Link>
-                <Link to ='perfil'>
+                
+                <Link to='perfil' className={estilos.menuLinks}>
                 <li>
                     <span class="material-symbols-outlined">
                         account_circle
                     </span>
-                    Conta
+                    <span>Conta</span>
                 </li>
                 </Link>
             </ul>

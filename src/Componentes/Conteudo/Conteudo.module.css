@@ -1,7 +1,5 @@
 .container {
     background-color: #141414;
-    /* padding: 100px 30px 100px; */
-    min-height: calc(100vh - 200px);
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }

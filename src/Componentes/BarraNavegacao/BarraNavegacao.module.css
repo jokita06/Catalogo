@@ -1,11 +1,29 @@
 .container {
+    display: flex;
+    align-items: center;
     background-color: #141414;
     padding: 80px;
 }
 
 .container ul {
+    margin: 0;
     display: flex;
     gap: 15px;
     list-style-type: none;
     color: white;
+    padding: 0; 
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container a {
+    text-decoration: none;
+    color: white;
+}
+
+.container li {
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
 }

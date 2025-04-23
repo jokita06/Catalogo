@@ -1,29 +1,65 @@
 .container {
     display: flex;
-    align-items: center;
-    background-color: #141414;
-    padding: 80px;
+    align-items: flex-end;
+    padding: 20px 80px;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Garante que fique acima do slider */
+    transition: background-color 0.3s ease;
 }
 
+.container.scrolled {
+    background-color: rgba(20, 20, 20, 0.95); /* Cor mais sólida ao rolar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Restante do CSS permanece o mesmo */
 .container ul {
     margin: 0;
     display: flex;
-    gap: 15px;
+    gap: 30px;
     list-style-type: none;
     color: white;
-    padding: 0; 
-    margin: 0;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
 }
 
-.container a {
+.menuLinks {
     text-decoration: none;
-    color: white;
+    color: #b3b3b3;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
 }
 
-.container li {
-    display: flex; 
-    align-items: center; 
-    gap: 8px; 
+.menuLinks:hover {
+    color: #ffffff;
+    background-color: #2a2a2a;
+    transform: translateY(-2px);
+}
+
+.menuLinks li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.menuLinks .material-symbols-outlined {
+    font-size: 1.5rem;
+}
+
+/* Estilo para link ativo */
+.menuLinks.active {
+    color: #e50914;
+    font-weight: 600;
+}
+
+.menuLinks.active .material-symbols-outlined {
+    font-variation-settings: 'FILL' 1;
 }

@@ -10,50 +10,188 @@
     align-items: center;
     z-index: 1000;
     backdrop-filter: blur(5px);
+    padding: 20px;
 }
 
 .modalContainer {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-    padding: 25px;
+    /* background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); */
+    padding: 20px;
     border-radius: 12px;
-    width: 80%;
-    max-width: 800px;
+    width: 90%;
+    max-width: 900px;
     max-height: 90vh;
     overflow: auto;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgb(197, 59, 59);
+    /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); */
 }
 
 .modalHeader {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(197, 59, 59, 0.2);
+    justify-content: center;
 }
 
-.modalHeader h2 {
-    color: rgb(197, 59, 59);
-    margin: 0;
-    font-size: 1.8rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+.closeButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.imgDetails {
+.modalContent {
     display: flex;
     gap: 30px;
-    align-items: flex-start;
+}
+
+.posterContainer {
+    flex: 0 0 300px;
 }
 
 .imgModal {
-    width: 100%;
-    max-width: 300px;
+    width: 90%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.movieDetail li {
+.infoContainer {
+    flex: 1;
+    color: #fff;
+}
+
+.movieTitle {
+    font-size: 1.7rem;
+    margin: 0 0 10px 0;
+    color: #fff;
+}
+
+.movieMeta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.rating {
+    color: #f5c518;
+    font-weight: bold;
+}
+
+.genres {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.genres span {
+    background-color: rgba(229, 9, 20, 0.2);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #e50914;
+    border: 1px solid rgba(229, 9, 20, 0.3);
+}
+
+.sectionTitle {
+    font-size: 1.2rem;
+    margin: 20px 0 10px 0;
+    color: #e50914;
+}
+
+.overview {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #ddd;
+    font-size: 14px;
+}
+
+.detailsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.detailItem {
+    margin-bottom: 10px;
+}
+
+.detailLabel {
+    display: block;
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 3px;
+}
+
+.detailValue {
+    font-size: 1rem;
+    color: #fff;
+}
+
+
+
+.watchButton, .trailerButton {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.watchButton {
+    background-color: #e50914;
     color: white;
+    border: none;
+}
+
+.watchButton:hover {
+    background-color: #f40612;
+    transform: translateY(-2px);
+}
+
+.trailerButton {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.trailerButton:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .modalContent {
+        flex-direction: column;
+    }
+    
+    .posterContainer {
+        flex: 0 0 auto;
+        margin-bottom: 20px;
+    }
+    
+    .modalContainer {
+        padding: 20px;
+    }
+    
+    .detailsGrid {
+        grid-template-columns: 1fr;
+    }
 }

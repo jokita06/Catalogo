@@ -1,5 +1,6 @@
 import { Cabecalho } from "../Componentes/Cabecalho/Cabecalho";
 import { BarraNavegacao } from "../Componentes/BarraNavegacao/BarraNavegacao";
+import HeroSlide from "../Componentes/HeroSlide";
 
 
 // Outlet é um espaço que serve para redenrizar o componeneteroa; Então se clicar no perfil, vai exibir o compenente que corresponde ao endereço perfil Rotas.
@@ -11,6 +12,7 @@ export function Inicial() {
         <>
             <Cabecalho/>
             <BarraNavegacao/>
+            <HeroSlide />
             <Outlet/>
         </>
     )

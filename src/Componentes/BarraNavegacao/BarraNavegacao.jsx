@@ -5,7 +5,7 @@ export function BarraNavegacao() {
     return (
         <nav className={estilos.container}>
             <ul>
-                <Link to="/" className={estilos.menuLinks}>
+                <Link to="/movie" className={estilos.menuLinks}>
                 <li>  
                     <span class="material-symbols-outlined">
                         movie

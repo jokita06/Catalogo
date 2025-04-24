@@ -2,7 +2,7 @@
 import axios from "axios";
 // As ferramentas começadas 
 import React, {useState, useEffect} from "react";
-import { Card } from '../Card/Card';
+import { CardSerie } from '../Card/CardSerie';
 import "./ListaSerie.css";
 import { Modal } from "../Modal/Modal";
 
@@ -17,7 +17,7 @@ export function ListaSerie() {
     
     // Efete trabalha com uma estrutura específica parêmetros (), script {} e dependências
     useEffect(() => {
-        axios.get(`${API_Url}/movie/popular?api_key=${API_Key}&language=pt-BR`)
+        axios.get(`${API_Url}/tv/popular?api_key=${API_Key}&language=pt-BR`)
             .then(response => {
                 console.log(response.data.results);
                 // Atualize o estado movies com os resultados da API
@@ -40,7 +40,7 @@ export function ListaSerie() {
         <div className="container">
             <figure style={{display: "flex", flexWrap:'wrap'}}>
                 {movies.map(movie=> (
-                    <Card key={movie.id}
+                    <CardSerie key={movie.id}
                     movie = {movie}
                     onOpenModal = {handleOpenModal}/>   
                 ))}

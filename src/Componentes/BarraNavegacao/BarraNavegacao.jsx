@@ -6,7 +6,7 @@ export function BarraNavegacao() {
         <nav className={estilos.container}>
             <ul>
 
-                <Link to="/home" className={estilos.menuLinks}>
+                <Link to="home" className={estilos.menuLinks}>
                 <li>  
                     <span class="material-symbols-outlined">
                         movie
@@ -14,7 +14,7 @@ export function BarraNavegacao() {
                     <span>Home</span>
                 </li>
                 </Link>
-                <Link to="/movie" className={estilos.menuLinks}>
+                <Link to="movie" className={estilos.menuLinks}>
                 <li>  
                     <span class="material-symbols-outlined">
                         movie

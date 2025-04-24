@@ -1,12 +1,12 @@
-import { Lista } from '../../Componentes/SeriesList/Lista';
+import { ListaSerie } from '../../Componentes/SeriesList/Lista';
 import HeroSlide  from '../../Componentes/Slide/HeroSlide'
 import './Serie.css'
 
-export function Conteudo() {
+export function Series() {
     return (
         <main className='container'>
             <HeroSlide />
-            <Lista />
+            <ListaSerie />
         </main>
     )
 }

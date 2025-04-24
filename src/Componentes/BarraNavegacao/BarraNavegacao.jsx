@@ -1,10 +1,19 @@
-import estilos from './BarraNavegacao.module.css';
+import estilos from './BarraNavegacao.module.css'
 import { Link } from 'react-router-dom';
 
 export function BarraNavegacao() {
     return (
         <nav className={estilos.container}>
             <ul>
+
+                <Link to="/home" className={estilos.menuLinks}>
+                <li>  
+                    <span class="material-symbols-outlined">
+                        movie
+                    </span>
+                    <span>Home</span>
+                </li>
+                </Link>
                 <Link to="/movie" className={estilos.menuLinks}>
                 <li>  
                     <span class="material-symbols-outlined">

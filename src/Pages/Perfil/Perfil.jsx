@@ -1,8 +1,8 @@
-import estilo from '../Pages/Perfil.module.css';
+import './Perfil.css'
 
 export function Perfil () {
     return (
-        <div className={estilo.container}>
+        <div className='container'>
             <h1>Perfil</h1>
         </div>
     )

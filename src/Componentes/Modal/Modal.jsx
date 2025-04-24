@@ -5,9 +5,6 @@ export function Modal({ movie, onClose }) {
         return null;
     }
 
-    // Função para formatar a data
-    
-
     return (
         <div className={estilos.modalback}>
             <div className={estilos.modalContainer}>

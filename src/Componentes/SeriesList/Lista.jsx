@@ -3,7 +3,7 @@ import axios from "axios";
 // As ferramentas começadas 
 import React, {useState, useEffect} from "react";
 import { Card } from '../Card/Card';
-import estilos from "./ListaSerie.css";
+import "./ListaSerie.css";
 import { Modal } from "../Modal/Modal";
 
 const API_Key = 'af26cce282aecf5c6cc39a264f29d0a7';
@@ -37,7 +37,7 @@ export function ListaSerie() {
     }
 
     return(
-        <div className={estilos.container}>
+        <div className="container">
             <figure style={{display: "flex", flexWrap:'wrap'}}>
                 {movies.map(movie=> (
                     <Card key={movie.id}

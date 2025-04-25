@@ -9,7 +9,7 @@ import './HeroSlide.css';
 const API_Key = 'af26cce282aecf5c6cc39a264f29d0a7';
 const API_Url = 'https://api.themoviedb.org/3'
 
-const HeroSlide = () => {
+const SlideSerie = () => {
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -18,7 +18,7 @@ const HeroSlide = () => {
         const fetchPopularMovies = async () => {
             try {
                 const response = await fetch(
-                    `${API_Url}/movie/popular?api_key=${API_Key}&language=pt-BR&page=1`
+                    `${API_Url}/tv/popular?api_key=${API_Key}&language=pt-BR`
                 );
                 
                 if (!response.ok) {
@@ -26,7 +26,7 @@ const HeroSlide = () => {
                 }
                 
                 const data = await response.json();
-                setMovies(data.results.slice(0, 5)); // Pegamos os 5 primeiros filmes
+                setMovies(data.results.slice(0, 6)); 
                 setLoading(false);
             } catch (err) {
                 setError(err.message);
@@ -84,4 +84,4 @@ const HeroSlide = () => {
     );
 };
 
-export default HeroSlide;
+export default SlideSerie;

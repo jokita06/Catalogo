@@ -9,7 +9,7 @@ import { Modal } from "../Modal/Modal";
 const API_Key = 'af26cce282aecf5c6cc39a264f29d0a7';
 const API_Url = 'https://api.themoviedb.org/3'
 
-export function ListaSerie() {
+export function SerieList() {
     const [movies, setMovie] = useState([])
 
     // mostra se foi selecionado um filme para a vizualização

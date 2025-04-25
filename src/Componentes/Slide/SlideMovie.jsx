@@ -8,7 +8,7 @@ import './HeroSlide.css';
 const API_Key = 'af26cce282aecf5c6cc39a264f29d0a7';
 const API_Url = 'https://api.themoviedb.org/3';
 
-const HeroSlide = () => {
+const SlideMovie = () => {
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -88,4 +88,4 @@ const HeroSlide = () => {
     );
 };
 
-export default HeroSlide;
+export default SlideMovie;

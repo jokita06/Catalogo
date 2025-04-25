@@ -1,6 +1,6 @@
 import './Movie.css';
-import { Lista } from '../../Componentes/MovieList/Lista';
-import HeroSlide from '../../Componentes/Slide/HeroSlide';
+import { MovieList } from '../../Componentes/MovieList/Lista';
+import SlideMovie from '../../Componentes/Slide/SlideMovie';
 
 export function Movies() {
     return (
@@ -8,11 +8,11 @@ export function Movies() {
             {/* Container do banner com barra de navegação */}
             <div className="hero-section" style={{ position: 'relative' }}>
 
-                <HeroSlide />
+                <SlideMovie />
             </div>
             
             <div className="movie-list-section">
-                <Lista />
+                <MovieList />
             </div>
         </main>
     )

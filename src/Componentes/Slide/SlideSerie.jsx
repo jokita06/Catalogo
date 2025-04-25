@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './HeroSlide.css';
 
 const API_Key = 'af26cce282aecf5c6cc39a264f29d0a7';
-const API_Url = 'https://api.themoviedb.org/3';
+const API_Url = 'https://api.themoviedb.org/3'
 
 const HeroSlide = () => {
     const [movies, setMovies] = useState([]);
@@ -25,7 +26,7 @@ const HeroSlide = () => {
                 }
                 
                 const data = await response.json();
-                setMovies(data.results.slice(0, 5));
+                setMovies(data.results.slice(0, 5)); // Pegamos os 5 primeiros filmes
                 setLoading(false);
             } catch (err) {
                 setError(err.message);
@@ -42,21 +43,16 @@ const HeroSlide = () => {
     return (
         <div className="hero-slide">
             <Swiper
-                modules={[Autoplay, Pagination]}
+                modules={[Autoplay, Navigation, Pagination]}
                 spaceBetween={0}
                 slidesPerView={1}
                 loop={true}
                 autoplay={{
                     delay: 5000,
                     disableOnInteraction: false,
-                    pauseOnMouseEnter: true,
                 }}
-                speed={1000} // Tempo da animação em ms
-                pagination={{
-                    clickable: true,
-                    bulletClass: 'swiper-pagination-bullet',
-                    bulletActiveClass: 'swiper-pagination-bullet-active'
-                }}
+                navigation
+                pagination={{ clickable: true }}
             >
                 {movies.map((movie) => (
                     <SwiperSlide key={movie.id}>

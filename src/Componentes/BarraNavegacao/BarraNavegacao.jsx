@@ -5,41 +5,27 @@ export function BarraNavegacao() {
     return (
         <nav className={estilos.container}>
             <ul>
-
-                <Link to="home" className={estilos.menuLinks}>
-                <li>  
-                    <span class="material-symbols-outlined">
-                        movie
-                    </span>
-                    <span>Home</span>
-                </li>
-                </Link>
                 <Link to="movie" className={estilos.menuLinks}>
                 <li>  
-                    <span class="material-symbols-outlined">
-                        movie
-                    </span>
                     <span>Filmes</span>
                 </li>
                 </Link>
                 
                 <Link to='serie' className={estilos.menuLinks}> 
                 <li>
-                    <span class="material-symbols-outlined">
-                        movie
-                    </span>
                     <span>Séries</span>
                 </li>
                 </Link>
                 
-                <Link to='perfil' className={estilos.menuLinks}>
-                <li>
-                    <span class="material-symbols-outlined">
-                        account_circle
-                    </span>
-                    <span>Conta</span>
-                </li>
-                </Link>
+                <div className={estilos.perfilContainer}>
+                    <Link to='perfil' className={estilos.menuLinks}>
+                    <li>
+                        <div className={estilos.avatarPerfil} style={{ backgroundColor: '#4a6fa5' }}>
+                            U
+                        </div>
+                    </li>
+                    </Link>
+                </div>
             </ul>
         </nav>
     )

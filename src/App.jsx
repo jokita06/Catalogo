@@ -12,3 +12,16 @@ function App() {
 
 }
 export default App;
+
+// import React from "react";
+// import Header from './Componentes/header';
+
+// function App() {
+//   return (
+//     <>
+//       <Header />
+//     </>
+//   );
+// }
+
+// export default App;

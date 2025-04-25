@@ -1,24 +1,68 @@
 .container {
-    width: 220px;
-    margin: 15px;
+    width: 200px;
+    margin: 30px;
     border-radius: 8px;
     transition: all 0.3s ease;
-
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    background: #141414;
 }
 
-.container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-.container img {
+.imageContainer {
+    position: relative;
     width: 100%;
     height: 330px;
+    overflow: hidden;
+}
+
+.movieImage {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 8px 8px 0 0;
+    transition: all 0.3s ease;
+}
+
+.imageContainer:hover .movieImage {
+    filter: brightness(0.4) blur(3px); 
+    transform: scale(1.05); 
+}
+
+.playOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5); 
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.playIcon {
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.7));
+}
+
+.imageContainer:hover .playOverlay {
+    opacity: 1; /* Mostra o overlay no hover */
+}
+
+/* ... (mantenha os outros estilos existentes) ... */
+
+.playIcon {
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.7));
+}
+
+.imageContainer:hover .playOverlay {
+    opacity: 1;
 }
 
 .container h3 {
@@ -31,13 +75,8 @@
     color: white;
 }
 
-.container p {
-    padding: 0 10px 15px;
-    margin: 0;
-    font-size: 0.8rem;
-    color: #d2d2d2;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+.imageContainer:hover .movieImage {
+    filter: brightness(0.6) blur(2px); 
+    transform: scale(1.1);
+    transition: all 0.3s ease; 
 }

@@ -2,7 +2,7 @@
 import axios from "axios";
 // As ferramentas começadas 
 import React, {useState, useEffect} from "react";
-import { Card } from '../Card/Card';
+import { CardMovie } from '../Card/CardMovie';
 import estilos from "./Lista.module.css";
 import { Modal } from "../Modal/Modal";
 
@@ -40,7 +40,7 @@ export function Lista() {
         <div className={estilos.container}>
             <figure style={{display: "flex", flexWrap:'wrap'}}>
                 {movies.map(movie=> (
-                    <Card key={movie.id}
+                    <CardMovie key={movie.id}
                     movie = {movie}
                     onOpenModal = {handleOpenModal}/>   
                 ))}

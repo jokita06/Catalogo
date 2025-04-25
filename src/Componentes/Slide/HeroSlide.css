@@ -3,6 +3,8 @@
     height: 100vh;
     position: relative;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .slide-backdrop {
@@ -14,7 +16,41 @@
     display: flex;
     align-items: center;
     padding: 0 5%;
+    padding-top: 80px;
 }
+
+/* Estilo para os indicadores de paginação */
+.swiper-pagination {
+    position: absolute;
+    bottom: 30px !important;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 10;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #e50914 !important;
+    transform: scale(1.2);
+}
+
+/* Efeito de transição suave entre slides */
+.swiper-slide {
+    transition: opacity 1000ms ease-in-out !important;
+}
+
+/* ... (mantenha os outros estilos existentes) ... */
 
 .slide-content {
     max-width: 600px;
@@ -72,6 +108,3 @@
     border: none;
 }
 
-/* .info-button:hover {
-    background-color: rgba(109, 109, 110,
-} */

@@ -1,7 +1,18 @@
 .container {
-    background-color: #141414;
-    padding: 100px 30px 100px;
-    min-height: calc(100vh - 200px);
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #141414;
+}
+
+.hero-container {
+    width: 100%;
+    position: relative;
+}
+
+.movie-list-container {
+    padding: 2rem;
+    flex: 1;
 }

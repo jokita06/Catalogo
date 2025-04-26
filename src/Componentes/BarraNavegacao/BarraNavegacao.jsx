@@ -5,13 +5,13 @@ export function BarraNavegacao() {
     return (
         <nav className={estilos.container}>
             <ul>
-                <Link to="movie" className={estilos.menuLinks}>
+                <Link to="movies" className={estilos.menuLinks}>
                 <li>  
                     <span>Filmes</span>
                 </li>
                 </Link>
                 
-                <Link to='serie' className={estilos.menuLinks}> 
+                <Link to='series' className={estilos.menuLinks}> 
                 <li>
                     <span>Séries</span>
                 </li>

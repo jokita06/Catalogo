@@ -10,8 +10,6 @@ const API_Url = 'https://api.themoviedb.org/3';
 
 const SlideMovie = () => {
     const [movies, setMovies] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchPopularMovies = async () => {
@@ -25,7 +23,7 @@ const SlideMovie = () => {
                 }
                 
                 const data = await response.json();
-                setMovies(data.results.slice(0, 5));
+                setMovies(data.results.slice(0, 6));
                 setLoading(false);
             } catch (err) {
                 setError(err.message);
@@ -35,9 +33,6 @@ const SlideMovie = () => {
 
         fetchPopularMovies();
     }, []);
-
-    if (loading) return <div className="loading">Carregando...</div>;
-    if (error) return <div className="error">Erro: {error}</div>;
 
     return (
         <div className="hero-slide">
@@ -71,9 +66,6 @@ const SlideMovie = () => {
                                 <div className="slide-meta">
                                     <span className="slide-rating">
                                         ⭐ {movie.vote_average.toFixed(1)}
-                                    </span>
-                                    <span className="slide-year">
-                                        {new Date(movie.release_date).getFullYear()}
                                     </span>
                                 </div>
                                 <p className="slide-overview">

@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './HeroSlide.css';
 
 const API_Key = 'af26cce282aecf5c6cc39a264f29d0a7';
-const API_Url = 'https://api.themoviedb.org/3'
+const API_Url = 'https://api.themoviedb.org/3';
 
 const SlideSerie = () => {
     const [movies, setMovies] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchPopularMovies = async () => {
@@ -26,7 +23,7 @@ const SlideSerie = () => {
                 }
                 
                 const data = await response.json();
-                setMovies(data.results.slice(0, 6)); 
+                setMovies(data.results.slice(0, 6));
                 setLoading(false);
             } catch (err) {
                 setError(err.message);
@@ -37,22 +34,24 @@ const SlideSerie = () => {
         fetchPopularMovies();
     }, []);
 
-    if (loading) return <div className="loading">Carregando...</div>;
-    if (error) return <div className="error">Erro: {error}</div>;
-
     return (
         <div className="hero-slide">
             <Swiper
-                modules={[Autoplay, Navigation, Pagination]}
+                modules={[Autoplay, Pagination]}
                 spaceBetween={0}
                 slidesPerView={1}
                 loop={true}
                 autoplay={{
                     delay: 5000,
                     disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
                 }}
-                navigation
-                pagination={{ clickable: true }}
+                speed={1000} // Tempo da animação em ms
+                pagination={{
+                    clickable: true,
+                    bulletClass: 'swiper-pagination-bullet',
+                    bulletActiveClass: 'swiper-pagination-bullet-active'
+                }}
             >
                 {movies.map((movie) => (
                     <SwiperSlide key={movie.id}>
@@ -63,13 +62,10 @@ const SlideSerie = () => {
                             }}
                         >
                             <div className="slide-content">
-                                <h2 className="slide-title">{movie.title}</h2>
+                                <h2 className="slide-title">{movie.name}</h2>
                                 <div className="slide-meta">
                                     <span className="slide-rating">
                                         ⭐ {movie.vote_average.toFixed(1)}
-                                    </span>
-                                    <span className="slide-year">
-                                        {new Date(movie.release_date).getFullYear()}
                                     </span>
                                 </div>
                                 <p className="slide-overview">

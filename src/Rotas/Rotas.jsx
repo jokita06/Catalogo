@@ -9,9 +9,9 @@ export function Rotas() {
         <Routes>
             <Route path='/' element={<Inicial/>}>
                 <Route index element={<Movies/>} />
-                <Route path='movie' element={<Movies/>} />
+                <Route path='movies' element={<Movies/>} />
                 <Route path='perfil' element={<Perfil/>} />
-                <Route path='serie' element={<Series/>} />
+                <Route path='series' element={<Series/>} />
             </Route>
         </Routes>
     );

@@ -52,13 +52,8 @@
     font-weight: bold;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-    border: 4px solid rgba(255, 255, 255, 0.1);
   }
   
-  .avatar:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-  }
   
   .nome-container {
     text-align: center;
@@ -123,8 +118,6 @@
   
   .editar-nome input:focus {
     outline: none;
-    border-color: #feb47b;
-    box-shadow: 0 0 10px rgba(254, 180, 123, 0.5);
   }
   
   .botoes-edicao {
@@ -142,7 +135,7 @@
   }
   
   .editar-nome .salvar {
-    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    background-color: #4facfe;
     color: white;
   }
   
@@ -209,4 +202,5 @@
 
 .test {
   padding: 40px;
+  background-color: #141414;
 }

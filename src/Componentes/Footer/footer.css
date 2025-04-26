@@ -1,0 +1,7 @@
+.containerFooter {
+    background-color: rgb(16, 16, 16);
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}

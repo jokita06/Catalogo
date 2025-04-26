@@ -8,8 +8,8 @@ export function Perfil() {
   const [nomeTemporario, setNomeTemporario] = useState(nome);
 
   const coresDisponiveis = [
-    '#4a6fa5', '#c73e1d', 
-    '#3e8c4f', '#e6b31e', '#d973ad', '#9b59b6'
+    '#4a6fa5', '#a1281b', 
+    '#3e8c4f', '#daaa19', '#d973ad', '#9b59b6'
   ];
 
   const handleSalvarNome = () => {

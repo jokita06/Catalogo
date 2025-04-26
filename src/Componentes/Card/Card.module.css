@@ -1,6 +1,5 @@
 .container {
     width: 200px;
-    margin: 30px;
     border-radius: 8px;
     transition: all 0.3s ease;
     overflow: hidden;
@@ -12,7 +11,7 @@
 .imageContainer {
     position: relative;
     width: 100%;
-    height: 330px;
+    height: 300px;
     overflow: hidden;
 }
 
@@ -27,6 +26,7 @@
 .imageContainer:hover .movieImage {
     filter: brightness(0.4) blur(3px); 
     transform: scale(1.05); 
+
 }
 
 .playOverlay {
@@ -49,12 +49,6 @@
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.7));
 }
 
-.imageContainer:hover .playOverlay {
-    opacity: 1; /* Mostra o overlay no hover */
-}
-
-/* ... (mantenha os outros estilos existentes) ... */
-
 .playIcon {
     width: 60px;
     height: 60px;
@@ -73,10 +67,4 @@
     overflow: hidden;
     text-overflow: ellipsis;
     color: white;
-}
-
-.imageContainer:hover .movieImage {
-    filter: brightness(0.6) blur(2px); 
-    transform: scale(1.1);
-    transition: all 0.3s ease; 
 }

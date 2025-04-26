@@ -38,7 +38,7 @@ export function MovieList() {
 
     return(
         <div className={estilos.container}>
-            <figure style={{display: "flex", flexWrap:'wrap'}}>
+            <figure>
                 {movies.map(movie=> (
                     <CardMovie key={movie.id}
                     movie = {movie}

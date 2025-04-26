@@ -3,8 +3,8 @@ import axios from "axios";
 // As ferramentas começadas 
 import React, {useState, useEffect} from "react";
 import { CardSerie } from '../Card/CardSerie';
-import "./ListaSerie.css";
-import { Modal } from "../Modal/Modal";
+import estilos from "./ListaSerie.module.css";
+import { ModalSerie } from "../Modal/ModalSerie";
 
 const API_Key = 'af26cce282aecf5c6cc39a264f29d0a7';
 const API_Url = 'https://api.themoviedb.org/3'
@@ -37,15 +37,15 @@ export function SerieList() {
     }
 
     return(
-        <div className="container">
-            <figure style={{display: "flex", flexWrap:'wrap'}}>
+        <div className={estilos.container}>
+            <figure>
                 {movies.map(movie=> (
                     <CardSerie key={movie.id}
                     movie = {movie}
                     onOpenModal = {handleOpenModal}/>   
                 ))}
             </figure>
-            {SelectedMovie && (<Modal movie={SelectedMovie} onClose = {handleCloseModal}/>)}
+            {SelectedMovie && (<ModalSerie movie={SelectedMovie} onClose = {handleCloseModal}/>)}
         </div>
     )
 }

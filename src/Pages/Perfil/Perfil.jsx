@@ -81,7 +81,7 @@ export function Perfil() {
           </div>
         </div>
 
-        </div>
+      </div>
     </div>
   );
 }
